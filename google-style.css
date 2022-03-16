@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: arial, sans-serif;
+  font-size: 0.9em; /* 0.9em == 90% of original size*/
+}
+
+a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+
+ul > a,
+ul > img {
+  padding: 0 8px;
+}
+
+.header-image:hover {
+  box-shadow: 0 0 10px 0 gainsboro; /* horizontal offset, vertical offset, blur radius, size of the shadow */
+  border-radius: 20px;
+  cursor: pointer; /* changes mouse symbol */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh; /* 5% of the view height of the browser window */
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+  height: 38px;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+}
+
+.input-container:hover {
+  box-shadow: 0 0 10px 0 gainsboro;
+}
+
+.input-container > input {
+  flex-grow: 1; /* something higher than 1 will be enough */
+  border: none;
+  outline: none;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.button-container {
+  padding-top: 53px;
+}
+
+button {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border: 1px;
+  height: 36px;
+  padding: 0 20px;
+  margin: 0 4px;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 gainsboro;
+}
+
+footer {
+  background-color: #f2f2f2;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+#footer-left {
+  display: flex;
+  justify-self: start;
+  padding-left: 20px;
+  align-items: center;
+}
+
+#footer-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  align-items: center;
+}
+
+@media (max-width: 630px) {
+  #footer-nav {
+    flex-direction: column;
+  }
+  #footer-left {
+    justify-content: center;
+  }
+  #footer-right {
+    justify-content: center;
+  }
+  .input-container {
+    width: 95vw;
+  }
+}
+
+@media (max-height: 522px) {
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    margin-bottom: 20px;
+  }
+  footer {
+    position: relative;
+  }
+}
+
+@media (max-height: 570px) and (max-width: 630px) {
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    margin-bottom: 13px;
+  }
+  footer {
+    position: relative;
+  }
+}
